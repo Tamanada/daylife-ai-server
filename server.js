@@ -15,7 +15,7 @@ app.post("/generate", async (req, res) => {
   try {
     const response = await fetch("https://api.openai.com/v1/images/generations", {
       method: "POST",
-      headers: {
+      headers: {  
         "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
         "Content-Type": "application/json"
       },
